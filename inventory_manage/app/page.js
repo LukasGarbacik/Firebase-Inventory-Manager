@@ -69,6 +69,7 @@ export default function Home() {
       flexDirection="column" 
       gap={2}
     > 
+    <h1 align="center"> HeadStarter Inventory Manager <br /> Week 2 Project</h1>
       <Modal open={open} onClose={handleClose}>
         <Box 
           position ="absolute" 
@@ -86,7 +87,7 @@ export default function Home() {
             transform : 'translate(-50%,-50%)',
           }}
         >  
-        <Typography variant ="h6" > Add Item </Typography>
+        <Typography variant ="h6" > Enter Item Name </Typography>
           <Stack width = "100%" direction ="row" spacing ={2}>
             <TextField
               variant = "outlined"
@@ -115,7 +116,7 @@ export default function Home() {
       </Button>
       <Box border="1px solid #000">
         <Box width="800px" height="100px" bgcolor="#F3C20F" alignItems="center" display="flex" justifyContent="center">
-          <Typography variant="h2" color="#333"> Inventory Manager</Typography>
+          <Typography variant="h2" color="#333"> Pantry Inventory</Typography>
         </Box>
       <Stack width="800px" height="300px" spacing={2} overflow="auto">
         {inventory.map(({name,quantity}) => (
@@ -139,12 +140,12 @@ export default function Home() {
 
               <Button variant ="contained" onClick={()=> {
                 addItem(name)
-              }}>Add
+              }}>Add Item 
               </Button>
 
               <Button variant ="contained" onClick={()=> {
               removeItem(name)
-              }}>Remove
+              }}>Remove Item
               </Button>
 
             </Stack>
@@ -155,6 +156,9 @@ export default function Home() {
     </Box> 
     )
 }
+
+//make personal modifiacations and label prjoject
+//deploy to vercel
 
 //make personal modifiacations and label prjoject
 //deploy to vercel
